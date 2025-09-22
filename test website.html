@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaan European guy</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      margin: 0; 
+      height: 100vh;
+      background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #6dd5ed, #2193b0);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      color: #333;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    h1 { 
+      color: darkblue; 
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: darkblue;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      display: inline-block;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      max-width: 500px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: darkblue;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: navy;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <h1>Kaan European guy</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#feature">Feature</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main card section -->
+  <div class="card" id="about">
+    <h2>About This Website</h2>
+    <p>This is my upgraded test site with cool effects.</p>
+    <button onclick="showMessage()">Click Me!</button>
+    <p id="message" style="display:none; margin-top:15px; color:green; font-weight:bold;"></p>
+  </div>
+
+  <!-- Another section -->
+  <div class="card" id="feature">
+    <h2>Cool Feature</h2>
+    <p>Here’s a live clock showing your local time:</p>
+    <p id="clock" style="font-size:20px; font-weight:bold;"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Made with ❤️ by Kaan | Contact: myemail@example.com</p>
+  </footer>
+
+  <script>
+    // Button feature
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+      document.getElementById("message").innerText = "🎉 You clicked the button!";
+    }
+
+    // Live clock
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("clock").innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
